@@ -137,8 +137,8 @@ table.sched tr:last-child td{border-bottom:1px solid var(--fg)}
 .venue{font-size:14px;color:var(--muted);line-height:1.6}
 /* unfold figure highlights */
 .epg rect,.epg path{transition:fill .2s,opacity .2s}
-.epg.x path{opacity:0}
-.epg.x.on path{opacity:1}
+.epg.x path,.epg.x text{opacity:0}
+.epg.x.on path,.epg.x.on text{opacity:1}
 .epg.pre.on rect,.epg.post.on rect{fill:var(--accent)}
 .epg.x.on rect{fill:var(--accent-ink);stroke:var(--accent-ink)}
 .ph{opacity:.15;transition:opacity .2s}
@@ -223,20 +223,22 @@ table.sched tr:last-child td{border-bottom:1px solid var(--fg)}
 <section class="slide" data-note="n3b" data-time="1:00" data-steps="3" data-ep="Mechanics">
   <h2>How a crossover unfolds over a season</h2>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start;flex:1;min-height:0">
-    <svg viewBox="0 0 540 400" style="width:100%;height:auto;display:block" aria-label="Three shows with weekly episodes; the crossover runs across consecutive episodes of each show">
+    <svg viewBox="0 0 540 400" style="width:100%;height:auto;display:block" aria-label="Three shows airing on different weekdays; the crossover is one story told on consecutive nights of a single week">
       <g font-family="IBM Plex Sans, Arial, sans-serif" font-size="14" fill="currentColor">
-        <text x="0" y="18" font-size="15" font-weight="600">Episode schedule (one season)</text>
-        <text x="0" y="78">Show A</text><text x="0" y="138">Show B</text><text x="0" y="198">Show C</text>
-        <g class="epg pre" data-step="1" fill="var(--panel)" stroke="currentColor"><rect x="80" y="62" width="30" height="24"/><rect x="116" y="62" width="30" height="24"/><rect x="152" y="62" width="30" height="24"/><rect x="188" y="62" width="30" height="24"/><rect x="224" y="62" width="30" height="24"/><rect x="80" y="122" width="30" height="24"/><rect x="116" y="122" width="30" height="24"/><rect x="152" y="122" width="30" height="24"/><rect x="188" y="122" width="30" height="24"/><rect x="224" y="122" width="30" height="24"/><rect x="260" y="122" width="30" height="24"/><rect x="80" y="182" width="30" height="24"/><rect x="116" y="182" width="30" height="24"/><rect x="152" y="182" width="30" height="24"/><rect x="188" y="182" width="30" height="24"/><rect x="224" y="182" width="30" height="24"/><rect x="260" y="182" width="30" height="24"/><rect x="296" y="182" width="30" height="24"/></g>
-        <g class="epg x" data-step="2" fill="var(--panel)" stroke="currentColor"><rect x="260" y="62" width="30" height="24"/><rect x="296" y="122" width="30" height="24"/><rect x="332" y="182" width="30" height="24"/></g>
-        <g class="epg post" data-step="3" fill="var(--panel)" stroke="currentColor"><rect x="296" y="62" width="30" height="24"/><rect x="332" y="62" width="30" height="24"/><rect x="368" y="62" width="30" height="24"/><rect x="404" y="62" width="30" height="24"/><rect x="440" y="62" width="30" height="24"/><rect x="476" y="62" width="30" height="24"/><rect x="332" y="122" width="30" height="24"/><rect x="368" y="122" width="30" height="24"/><rect x="404" y="122" width="30" height="24"/><rect x="440" y="122" width="30" height="24"/><rect x="476" y="122" width="30" height="24"/><rect x="368" y="182" width="30" height="24"/><rect x="404" y="182" width="30" height="24"/><rect x="440" y="182" width="30" height="24"/><rect x="476" y="182" width="30" height="24"/></g>
-        <g class="epg x" data-step="2" stroke="var(--accent-ink)" stroke-width="2.5" fill="none"><path d="M290 86 L302 122"/><path d="M326 146 L338 182"/></g>
+        <text x="0" y="18" font-size="15" font-weight="600">Episode schedule (one season, one column per week)</text>
+        <text x="0" y="78">Show A</text><text x="0" y="78" dx="52" font-size="11" fill="var(--muted)">Mon</text><text x="0" y="138">Show B</text><text x="0" y="138" dx="52" font-size="11" fill="var(--muted)">Tue</text><text x="0" y="198">Show C</text><text x="0" y="198" dx="52" font-size="11" fill="var(--muted)">Wed</text>
+        <g class="epg pre" data-step="1" fill="var(--panel)" stroke="currentColor"><rect x="80" y="62" width="30" height="24"/><rect x="116" y="62" width="30" height="24"/><rect x="152" y="62" width="30" height="24"/><rect x="188" y="62" width="30" height="24"/><rect x="224" y="62" width="30" height="24"/><rect x="260" y="62" width="30" height="24"/><rect x="80" y="122" width="30" height="24"/><rect x="116" y="122" width="30" height="24"/><rect x="152" y="122" width="30" height="24"/><rect x="188" y="122" width="30" height="24"/><rect x="224" y="122" width="30" height="24"/><rect x="260" y="122" width="30" height="24"/><rect x="80" y="182" width="30" height="24"/><rect x="116" y="182" width="30" height="24"/><rect x="152" y="182" width="30" height="24"/><rect x="188" y="182" width="30" height="24"/><rect x="224" y="182" width="30" height="24"/><rect x="260" y="182" width="30" height="24"/></g>
+        <g class="epg x" data-step="2" fill="var(--panel)" stroke="currentColor"><rect x="296" y="62" width="30" height="24"/><rect x="296" y="122" width="30" height="24"/><rect x="296" y="182" width="30" height="24"/></g>
+        <g class="epg post" data-step="3" fill="var(--panel)" stroke="currentColor"><rect x="332" y="62" width="30" height="24"/><rect x="368" y="62" width="30" height="24"/><rect x="404" y="62" width="30" height="24"/><rect x="440" y="62" width="30" height="24"/><rect x="476" y="62" width="30" height="24"/><rect x="332" y="122" width="30" height="24"/><rect x="368" y="122" width="30" height="24"/><rect x="404" y="122" width="30" height="24"/><rect x="440" y="122" width="30" height="24"/><rect x="476" y="122" width="30" height="24"/><rect x="332" y="182" width="30" height="24"/><rect x="368" y="182" width="30" height="24"/><rect x="404" y="182" width="30" height="24"/><rect x="440" y="182" width="30" height="24"/><rect x="476" y="182" width="30" height="24"/></g>
+        <g class="epg x" data-step="2" stroke="var(--accent-ink)" stroke-width="2.5" fill="none"><path d="M311 86 L311 122"/><path d="M311 146 L311 182"/><path d="M290 48 L290 40 L332 40 L332 48"/></g>
+        <g class="epg x" data-step="2" fill="var(--accent-ink)"><text x="311" y="36" text-anchor="middle" font-size="11" font-weight="600">one week</text></g>
         <text x="95" y="232" font-size="12" fill="var(--muted)">week 1</text><text x="475" y="232" font-size="12" fill="var(--muted)">week 12</text>
-        <g class="ph" data-step="1"><rect class="band" x="80" y="252" width="174" height="30" fill="var(--accent-ink)" opacity=".18"/><text x="167" y="272" text-anchor="middle" font-weight="600">Pre: anticipation</text></g>
-        <g class="ph" data-step="2"><rect class="band" x="260" y="252" width="102" height="30" fill="var(--accent-ink)" opacity=".5"/><text x="311" y="272" text-anchor="middle" font-weight="600">Within</text></g>
-        <g class="ph" data-step="3"><rect class="band" x="368" y="252" width="138" height="30" fill="var(--accent-ink)" opacity=".18"/><text x="437" y="272" text-anchor="middle" font-weight="600">Post: retention</text></g>
-        <text x="0" y="330" font-size="13" fill="var(--muted)">One story told across consecutive episodes of several shows,</text>
-        <text x="0" y="350" font-size="13" fill="var(--muted)">announced before the season and promoted for weeks in advance.</text>
+        <g class="ph" data-step="1"><rect class="band" x="80" y="252" width="210" height="30" fill="var(--accent-ink)" opacity=".18"/><text x="185" y="272" text-anchor="middle" font-weight="600">Pre: anticipation</text></g>
+        <g class="ph" data-step="2"><rect class="band" x="296" y="252" width="30" height="30" fill="var(--accent-ink)" opacity=".5"/><text x="311" y="300" text-anchor="middle" font-weight="600">Within</text></g>
+        <g class="ph" data-step="3"><rect class="band" x="332" y="252" width="174" height="30" fill="var(--accent-ink)" opacity=".18"/><text x="419" y="272" text-anchor="middle" font-weight="600">Post: retention</text></g>
+        <text x="0" y="336" font-size="13" fill="var(--muted)">Each show airs on its own weekday. The crossover is one story told on</text>
+        <text x="0" y="356" font-size="13" fill="var(--muted)">consecutive nights of a single week.</text>
+        <text x="0" y="376" font-size="13" fill="var(--muted)">Announced before the season and promoted for weeks in advance.</text>
       </g>
     </svg>
     <svg viewBox="0 0 540 400" style="width:100%;height:auto;display:block" aria-label="Viewership of one show over the season: a declining baseline, a lift before the crossover, a spike during, and a higher path after">
