@@ -8,3 +8,4 @@ Joon Ro (Uber Freight), Eunjoo Han (Penn State Erie), Seoungwoo Lee (Yonsei Univ
 - Slides (PDF): https://omsal.github.io/isoms2026-crossover/slides.pdf
 
 Keys: arrow keys or space to advance, B to step back one build, F for fullscreen.
+- Presenter view with speaker notes (N key): https://omsal.github.io/isoms2026-crossover/presenter.html
