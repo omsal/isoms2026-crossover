@@ -13,3 +13,4 @@ Keys: arrow keys or space to advance, B to step back one build, F for fullscreen
 Alternative cuts (same content, different design):
 - Classic: https://omsal.github.io/isoms2026-crossover/classic.html
 - Studio (dark): https://omsal.github.io/isoms2026-crossover/studio.html
+- Yonsei (blue studio): https://omsal.github.io/isoms2026-crossover/yonsei.html
