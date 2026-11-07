@@ -14,3 +14,4 @@ Alternative cuts (same content, different design):
 - Classic: https://omsal.github.io/isoms2026-crossover/classic.html
 - Studio (dark): https://omsal.github.io/isoms2026-crossover/studio.html
 - Yonsei (blue studio): https://omsal.github.io/isoms2026-crossover/yonsei.html
+- Vector (flat illustration): https://omsal.github.io/isoms2026-crossover/vector.html
